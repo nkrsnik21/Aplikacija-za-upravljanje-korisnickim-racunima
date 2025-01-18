@@ -1,0 +1,18 @@
+Upute za pokretanje projekta Aplikacija za upravljanje korisničkim računima -> PostgreSQL + HTML
+
+1. Pomoću Terminala se pokreće pg_dump datoteka korisnicki_racuni.sql kojom se kreira potrebna baza podataka potrebna za projekt
+2. Otvara se Flask app.py te sve html stranice koje se nalaze u datoteci "templates", a to su:
+	- početna login stranica login.html koja traži ime usera i password npr. user: superadmin password: 1234
+	- glavna stranica dashboard.html koja se otvara nakon prijave korisnika i na njoj se prikazuju različiti podaci ovisno o korisniku koji se prijavio
+	- dodaj_post.html stranica na kojoj se kreira nova objava
+	- add_user.html koja superadminu omogućuje dodavanje novih korisnika 
+	- meta_podaci.html posebno kreirana stranica za prikaz meta podataka koje povlači iz tablice meta_podaci te je ona vidljiva samo superadminu
+3. Povezivanje Flask-a s bazom podataka i HTML stranicama vrši se preko Terminala ispisom sljedećih naredbi:
+ 	1. Prvo se trebamo pozicionirati na mjesto gdje se nalazi Flask i HTML stranice
+ 	2. source venv/bin/activate
+ 	3. sudo apt install python3 (ako python nije instaliran)
+ 	4. python3 -m venv venv
+ 	5. pip show flask
+ 	6. pip install flask (ako flask nije instaliran)
+ 	7. python3 app.py
+
